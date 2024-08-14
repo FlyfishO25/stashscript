@@ -1,7 +1,8 @@
 #!name=APP启动页去广告lite
 #!desc=APP启动页去广告轻量版
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/startingad.png
-#!author=ddgksf2013&Flyfish
+#!homepage=https://whatshub.top
+#!author=ddgksf2013
 name: AdLite
 desc: APP启动页去广告轻量版
 http:
@@ -371,103 +372,13 @@ http:
     - "goblin.hupu.com"
     - "spclient.wg.spotify.com"
   script:
-    - match: ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1
-      name: APPqidongyequguanggaolite1
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList
-      name: APPqidongyequguanggaolite2
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^http:\/\/amdc\.m\.taobao\.com
-      name: APPqidongyequguanggaolite3
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$)
-      name: APPqidongyequguanggaolite4
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads
-      name: APPqidongyequguanggaolite5
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/audit\/home\/getCommonMixData
-      name: APPqidongyequguanggaolite6
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362
-      name: APPqidongyequguanggaolite7
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1
-      name: APPqidongyequguanggaolite8
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\?
-      name: APPqidongyequguanggaolite9
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show
-      name: APPqidongyequguanggaolite10
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms)
-      name: APPqidongyequguanggaolite11
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList)
-      name: APPqidongyequguanggaolite12
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api.coolapk.com\/v6\/main\/init
-      name: APPqidongyequguanggaolite13
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms
-      name: APPqidongyequguanggaolite14
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v\d\?position
-      name: APPqidongyequguanggaolite15
-      type: response
-      require-body: true
-      timeout: 10
-    - match: https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow
-      name: APPqidongyequguanggaolite16
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$
-      name: APPqidongyequguanggaolite17
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/.*v2ex\.com\/($|t\/\d+)
-      name: APPqidongyequguanggaolite18
-      type: response
-      require-body: true
-      timeout: 10
     - match: ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?
-      name: APPqidongyequguanggaolite19
+      name: AdLite1
       type: response
       require-body: true
       timeout: 10
-    - match: ^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2
-      name: APPqidongyequguanggaolite20
+    - match: ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
+      name: AdLite2
       type: response
       require-body: true
       timeout: 10
@@ -845,14 +756,8 @@ http:
     - ^https?:\/\/api\.ireader\.mobi\/activity\/ad\/openScreen - reject-200
 script-providers:
   AdLite1:
-    url: https://github.com/ddgksf2013/Scripts/raw/master/startup.js
+    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/js/weixin110.js
     interval: 86400
   AdLite2:
-    url: https://github.com/ddgksf2013/Scripts/raw/master/v2ex.js
-    interval: 86400
-  AdLite3:
-    url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js
-    interval: 86400
-  AdLite4:
-    url: https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js
+    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/js/wechat.js
     interval: 86400

@@ -1,7 +1,7 @@
 #!desc=哔哩哔哩去广告
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/biliad.png
 #!author=ddgksf2013&FlyfishO25
-name: bilibiliquguanggao
+name: AdFreeBilibili
 desc: 哔哩哔哩去广告
 http:
   mitm:
@@ -16,78 +16,63 @@ http:
     - "-*cdn*.biliapi.net"
     - "-*tracker*.biliapi.net"
   script:
-    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
-      name: bilibiliquguanggao1
-      type: response
-      require-body: true
-      timeout: 10
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
-      name: bilibiliquguanggao2
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
-      name: bilibiliquguanggao3
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
-      name: bilibiliquguanggao4
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
-      name: bilibiliquguanggao5
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https://app.bilibili.com/x/v2/search/square
-      name: bilibiliquguanggao6
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
-      name: bilibiliquguanggao7
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
-      name: bilibiliquguanggao8
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
-      name: bilibiliquguanggao9
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_(history|new)\?
-      name: bilibiliquguanggao10
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
-      name: bilibiliquguanggao11
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
-      name: bilibiliquguanggao12
+      name: AdFreeBilibili1
       type: response
       require-body: true
       timeout: 10
     - match: ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$
-      name: bilibiliquguanggao13
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$
-      name: bilibiliquguanggao14
-      type: response
-      require-body: true
-      timeout: 10
-    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
-      name: bilibiliquguanggao15
+      name: AdFreeBilibili2
       type: response
       require-body: true
       timeout: 10
@@ -104,9 +89,9 @@ http:
     - ^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
     - ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
 script-providers:
-  bilibiliquguanggao1:
-    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/bilibili_json.js
+  AdFreeBilibili1:
+    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/js/bilibili_json.js
     interval: 86400
-  bilibiliquguanggao2:
-    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/bilibili-proto.js
+  AdFreeBilibili2:
+    url: https://raw.githubusercontent.com/FlyfishO25/stashscript/main/js/bilibili-proto.js
     interval: 86400
