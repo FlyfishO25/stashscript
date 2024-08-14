@@ -2,7 +2,7 @@
 #!desc=APP启动页去广告轻量版
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/startingad.png
 #!author=ddgksf2013&Flyfish
-name: APPqidongyequguanggaolite
+name: AdLite
 desc: APP启动页去广告轻量版
 http:
   mitm:
@@ -844,15 +844,15 @@ http:
     - ^https?:\/\/app\.ibuscloud\.com\/v\d\/(app\/getSkipAdvert|notice\/getNoticeWithAdvByCity) - reject-200
     - ^https?:\/\/api\.ireader\.mobi\/activity\/ad\/openScreen - reject-200
 script-providers:
-  APPqidongyequguanggaolite10:
+  AdLite1:
     url: https://github.com/ddgksf2013/Scripts/raw/master/startup.js
     interval: 86400
-  APPqidongyequguanggaolite18:
+  AdLite2:
     url: https://github.com/ddgksf2013/Scripts/raw/master/v2ex.js
     interval: 86400
-  APPqidongyequguanggaolite19:
+  AdLite3:
     url: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js
     interval: 86400
-  APPqidongyequguanggaolite20:
+  AdLite4:
     url: https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js
     interval: 86400
